@@ -35,6 +35,7 @@ public class ConfigController {
                     break;
                 case "2":
                     // desabilitar save automático ( precisa implementar save primeiro)
+                    break;
                 case "3":
                     // se intervalo é igual a 1, o texto é rapido
                     // se intervalo é igual a 0, o texto é lento
@@ -44,6 +45,7 @@ public class ConfigController {
                     else{
                         config.changeIntervalo("0");
                     }
+                    break;
                 case "4":
                     System.out.println("Salvando as configurações...");
                     this.save.writeFile("saves/config.json",this.config);
