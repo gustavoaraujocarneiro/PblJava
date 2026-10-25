@@ -33,7 +33,6 @@ public class Conquista {
                 }
             }
         }
-        System.out.println(visit);
         if (visit >= 5){
             this.explorador = "1";
         }
