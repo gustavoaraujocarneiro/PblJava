@@ -1,0 +1,12 @@
+{
+  "nome" : "gus",
+  "genero" : "Masculino",
+  "nomeDetetive" : "",
+  "sanidade" : 100,
+  "autoestima" : 100,
+  "itens" : [ ],
+  "capituloId" : 1,
+  "cenaId" : 1,
+  "escolhasFeitas" : [ ],
+  "dataHora" : "25/10/2026 20:29"
+}
