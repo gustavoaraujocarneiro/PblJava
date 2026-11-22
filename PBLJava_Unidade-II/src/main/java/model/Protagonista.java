@@ -46,4 +46,7 @@ public class Protagonista {
 
     public void setSanidade(int s) { this.sanidade = s; }
     public void setAutoestima(int a) { this.autoestima = a; }
+
+    public void setNome(String nome) { this.nome = nome; }
+    public void setGenero(String genero) { this.genero = genero; }
 }

@@ -9,6 +9,7 @@ public class Jogo {
     private Capitulo capituloAtual;
     private Cena cenaAtual;
     private Set<String> escolhasFeitas;
+    private Personagem jorge = new Personagem("Jorge");
 
     public Jogo(Protagonista protagonista, Capitulo capituloAtual) {
         this.protagonista = protagonista;
@@ -44,4 +45,6 @@ public class Jogo {
     public boolean fezEscolha(String escolha) {
         return this.escolhasFeitas.contains(escolha);
     }
+
+    public Personagem getJorge() { return jorge; }
 }

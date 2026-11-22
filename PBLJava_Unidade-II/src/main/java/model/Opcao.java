@@ -32,4 +32,8 @@ public class Opcao {
     public int getProximoCapituloId() {
     return proximoCapituloId;
 }
+
+    public int getEfeitoConfianca()   { return efeitoConfianca; }
+
+    public int getEfeitoIntimidade()  { return efeitoIntimidade; }
 }

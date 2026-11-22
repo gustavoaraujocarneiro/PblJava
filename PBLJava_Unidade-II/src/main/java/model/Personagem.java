@@ -8,4 +8,6 @@ public class Personagem {
     public Personagem(String nome) {
         this.nome = nome;
     }
+    public int getConfianca() { return confianca; }
+    public void alterarConfianca(int valor) { this.confianca += valor; }
 }

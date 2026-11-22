@@ -25,7 +25,7 @@ public class Main {
         MenuView menuView = new MenuView();
         ConfigView configView = new ConfigView();
 
-        CapituloRepository capituloRepo = new CapituloRepository();
+        CapituloRepository capituloRepo = new CapituloRepository("historia.txt");
 
         JogoService jogoService = new JogoService(capituloRepo);
 

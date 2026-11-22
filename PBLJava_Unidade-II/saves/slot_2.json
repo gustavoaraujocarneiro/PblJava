@@ -1,0 +1,12 @@
+{
+  "nome" : "gustavo",
+  "genero" : "Masculino",
+  "nomeDetetive" : "Cesar",
+  "sanidade" : 100,
+  "autoestima" : 100,
+  "itens" : [ ],
+  "capituloId" : 1,
+  "cenaId" : 3,
+  "escolhasFeitas" : [ "1:2:0", "1:1:0" ],
+  "dataHora" : "21/11/2026 22:08"
+}

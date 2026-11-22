@@ -4,6 +4,6 @@ import java.util.Set;
 
 public record SaveData(String nome, String genero, String nomeDetetive,
                        int sanidade, int autoestima, List<String> itens,
-                       int capituloId, int cenaId, Set<String> escolhasFeitas, String dataHora) {
+                       int capituloId, int cenaId, Set<String> escolhasFeitas, String dataHora,int confiancaJorge) {
 
 }
