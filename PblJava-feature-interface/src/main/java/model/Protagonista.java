@@ -1,0 +1,53 @@
+package model;
+
+
+public class Protagonista {
+    private String nome;
+    private String nomeDetetive;
+    private String genero;
+    private int sanidade = 100;
+    private int autoestima = 100;
+    private Inventario inventario;
+
+    public Protagonista(String nome, String genero, String nomeDetetive) {
+        this.nome = nome;
+        this.nomeDetetive = nomeDetetive;
+        this.genero = genero;
+        this.inventario = new Inventario();
+    }
+
+    // Mantém os valores entre 0 e 100 (a tela mostra esses números)
+    public void alterarSanidade(int valor) {
+        this.sanidade = Math.max(0, Math.min(100, this.sanidade + valor));
+    }
+
+    public void alterarAutoestima(int valor) {
+        this.autoestima = Math.max(0, Math.min(100, this.autoestima + valor));
+    }
+
+    public String getNome() {
+        return this.nome;
+    }
+    public String getNomeDetetive() { return nomeDetetive; }
+
+    public String getGenero() {
+        return this.genero;
+    }
+
+    public int getAutoestima() {
+        return autoestima;
+    }
+
+    public int getSanidade() {
+        return sanidade;
+    }
+    public Inventario getinventario(){
+        return inventario;
+    }
+
+    public void setSanidade(int s) { this.sanidade = s; }
+    public void setAutoestima(int a) { this.autoestima = a; }
+
+    public void setNome(String nome) { this.nome = nome; }
+    public void setGenero(String genero) { this.genero = genero; }
+}
