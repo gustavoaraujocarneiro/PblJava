@@ -1,0 +1,28 @@
+# --- Configurações Atuais da IDE ---
+/shelf/
+/workspace.xml
+/httpRequests/
+/queries/
+/dataSources/
+/dataSources.local.xml
+*.iml
+.idea/
+out/
+
+# --- Compilação Java e Maven ---
+*.class
+target/
+*.jar
+*.war
+
+# --- Arquivos de Dados Locais ---
+# Ignora arquivos gerados pelos testes de persistência local
+*.bin
+*.log
+# Saves e configurações do jogador (não ignore *.json em geral:
+# os arquivos da história em src/main/resources precisam ir para o git)
+saves/
+
+# --- Arquivos do Sistema Operacional ---
+.DS_Store
+Thumbs.db
