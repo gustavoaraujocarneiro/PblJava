@@ -50,13 +50,9 @@ public class JogoController {
             }
 
             boolean escolhaValida = jogoService.processarEscolha(escolha - 1, jogo.getProtagonista());
-            conquista.exploradorCheck(jogo);
-            save.writeFile("saves/conquistas.json", conquista);
 
             if (!escolhaValida) {
                 view.exibirMensagem("Opção inválida!");
-            } else if (jogo.getCenaAtual() != null && config.getsave().equals("1")) {   // SAVE AUTOMÁTICO
-                save.writeFile(caminhoSlot("auto"), jogoService.criarSave());
             }
         }
 

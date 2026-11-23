@@ -28,6 +28,7 @@ public class Main {
         CapituloRepository capituloRepo = new CapituloRepository();
 
         JogoService jogoService = new JogoService(capituloRepo);
+        Observadores.registrar(jogoService, conquista, save, config);
 
         ConfigController configController = new ConfigController(configView, config, save);
         JogoController jogoController = new JogoController(terminalView, jogoService, conquista, save, config);

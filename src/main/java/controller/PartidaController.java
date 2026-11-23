@@ -63,25 +63,13 @@ public class PartidaController {
     // ---------- Durante o jogo ----------
 
     /**
-     * Faz o que o laço while do JogoController fazia a cada volta:
-     * processa a escolha, confere a conquista, grava e faz o save automático.
+     * Processa a escolha. Conquista e salvamento automático não ficam mais aqui:
+     * são observadores registrados no JogoService (ver main.Observadores).
      * Devolve false se o índice da opção for inválido.
      */
     public boolean escolher(int indiceOpcao) {
         Jogo jogo = jogoService.getJogoAtual();
-
-        boolean valida = jogoService.processarEscolha(indiceOpcao, jogo.getProtagonista());
-        if (!valida) {
-            return false;
-        }
-
-        conquista.exploradorCheck(jogo);
-        save.writeFile("saves/conquistas.json", conquista);
-
-        if (jogo.getCenaAtual() != null && "1".equals(config.getsave())) {
-            save.writeFile(JogoController.caminhoSlot("auto"), jogoService.criarSave());
-        }
-        return true;
+        return jogoService.processarEscolha(indiceOpcao, jogo.getProtagonista());
     }
 
     // ---------- Saves ----------

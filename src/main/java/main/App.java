@@ -11,12 +11,7 @@ import repository.SaveRepository;
 import service.JogoService;
 import view.fx.Navegador;
 
-/**
- * Ponto de entrada da versão com interface gráfica.
- * Rode com: mvn javafx:run
- *
- * (A classe Main continua existindo e roda a versão de terminal.)
- */
+
 public class App extends Application {
 
     // O JavaFX chama este método quando o programa abre. Ele substitui o main() para a interface.
@@ -30,6 +25,7 @@ public class App extends Application {
 
         CapituloRepository capituloRepo = new CapituloRepository();
         JogoService jogoService = new JogoService(capituloRepo);
+        Observadores.registrar(jogoService, conquista, save, config);
         PartidaController partida = new PartidaController(jogoService, save, config, conquista);
 
         Navegador navegador = new Navegador(stage, partida);
