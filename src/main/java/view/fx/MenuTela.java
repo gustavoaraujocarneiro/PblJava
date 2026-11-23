@@ -18,7 +18,6 @@ public class MenuTela {
         root.setAlignment(Pos.CENTER_LEFT);
         root.setPadding(new Insets(0, 0, 0, 80));
 
-        // 2. Substitui o setStyle inline pela classe CSS
         Label titulo = new Label("Incidente Lobo");
         titulo.getStyleClass().add("titulo-jogo");
 

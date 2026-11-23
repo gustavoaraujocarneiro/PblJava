@@ -17,11 +17,9 @@ public class NovoJogoTela {
     private final VBox root = new VBox();
 
     public NovoJogoTela(Navegador nav) {
-        // Fundo padrão do menu
         root.getStyleClass().add("tela-menu");
         root.setAlignment(Pos.CENTER);
 
-        // Card translúcido central para destacar o formulário
         VBox painel = new VBox(20);
         painel.getStyleClass().add("painel-conteudo");
         painel.setAlignment(Pos.CENTER);
@@ -30,7 +28,6 @@ public class NovoJogoTela {
         Label titulo = new Label("NOVO JOGO");
         titulo.getStyleClass().add("titulo-tela");
 
-        // Pergunta 1: Nome
         Label perguntaNome = new Label("Qual é o seu nome?");
         perguntaNome.getStyleClass().add("texto-padrao");
 
@@ -38,7 +35,6 @@ public class NovoJogoTela {
         campoNome.setPromptText("Digite o seu nome");
         campoNome.setMaxWidth(320);
 
-        // Pergunta 2: Gênero
         Label perguntaGenero = new Label("Qual o gênero do seu personagem?");
         perguntaGenero.getStyleClass().add("texto-padrao");
 
@@ -52,11 +48,9 @@ public class NovoJogoTela {
         HBox linhaGenero = new HBox(25, masculino, feminino);
         linhaGenero.setAlignment(Pos.CENTER);
 
-        // Mensagem de erro
         Label erro = new Label();
         erro.getStyleClass().add("texto-erro");
 
-        // Botões
         Button comecar = new Button("Começar");
         comecar.getStyleClass().addAll("botao-menu", "botao-centro");
         comecar.setOnAction(e -> {
@@ -76,7 +70,6 @@ public class NovoJogoTela {
         voltar.getStyleClass().add("botao-voltar");
         voltar.setOnAction(e -> nav.mostrarMenu());
 
-        // Cada pergunta fica agrupada com o seu campo (mais perto entre si do que das outras)
         VBox blocoNome = new VBox(8, perguntaNome, campoNome);
         blocoNome.setAlignment(Pos.CENTER);
         VBox blocoGenero = new VBox(8, perguntaGenero, linhaGenero);

@@ -43,7 +43,6 @@ public class OpcoesTela {
             partida.salvarConfig();
         });
 
-        // Container interno para alinhar as caixas de seleção à esquerda entre si
         VBox listaOpcoes = new VBox(14, saveAutomatico, textoRapido);
         listaOpcoes.setAlignment(Pos.CENTER_LEFT);
         listaOpcoes.setMaxWidth(420);

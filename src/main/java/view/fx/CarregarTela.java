@@ -16,11 +16,9 @@ public class CarregarTela {
     public CarregarTela(Navegador nav) {
         PartidaController partida = nav.getPartida();
 
-        // Usa o mesmo background do menu principal
         root.getStyleClass().add("tela-menu");
         root.setAlignment(Pos.CENTER);
 
-        // Cartão central (igual ao das outras telas) para as linhas de save ficarem legíveis
         VBox painel = new VBox(12);
         painel.getStyleClass().add("painel-conteudo");
         painel.setAlignment(Pos.CENTER);
